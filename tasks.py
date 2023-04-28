@@ -44,6 +44,8 @@ def update_version(version_files, fix_type):
         with open(version_file, "w") as f:
             f.write(content)
 
+        return new_version
+
 
 @task
 def release(c, fix_type):
@@ -52,14 +54,14 @@ def release(c, fix_type):
     ]
 
     # Update the version in the version files
-    update_version(version_files, fix_type)
+    new_version = update_version(version_files, fix_type)
 
     # Commit the changes
     c.run(f"git add {' '.join(version_files)}")
     c.run(f'git commit -m "Release {fix_type.capitalize()} Fix"')
 
     # Create a new tag
-    c.run("git tag v{new_version}")
+    c.run(f"git tag v{new_version}")
 
     # Push the changes and the new tag to GitHub
     c.run("git push")
