@@ -1,0 +1,7 @@
+MainWindow {
+    background-color: #121212 !important;
+}
+
+QLabel {
+    color: #FFFFFF;
+}

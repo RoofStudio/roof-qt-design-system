@@ -1,0 +1,15 @@
+Header {
+    max-height: 50px;
+    background-color: #292929 !important;
+    border: none;
+}
+
+Header QLabel {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+Header QGroupBox{
+    border: none;
+}
