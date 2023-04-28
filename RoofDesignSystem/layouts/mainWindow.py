@@ -7,7 +7,13 @@ from RoofDesignSystem.styles import get_stylesheet
 
 class MainWindow(QMainWindow):
     def __init__(
-        self, parent=None, width=300, height=300, title="Main Window", icon_path=None
+        self,
+        parent=None,
+        width=300,
+        height=300,
+        title="Main Window",
+        icon_path=None,
+        routes=None,
     ):
         super().__init__(parent)
 
@@ -24,7 +30,8 @@ class MainWindow(QMainWindow):
         self.setProperty("saveWindowPref", True)
         self.stacked_widget = QStackedWidget()
 
-        self.setup_routes()
+        if routes:
+            self.setup_routes(new_routes=routes)
         self.setCentralWidget(self.stacked_widget)
         self.setStyleSheet(get_stylesheet())
 
