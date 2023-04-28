@@ -2,7 +2,9 @@ from PySide6.QtWidgets import QTableWidget, QTableWidgetItem, QHeaderView
 
 
 class ComputerList(QTableWidget):
-    def __init__(self, computers, parent=None, header=["Computer Name", "Status", "User"]):
+    def __init__(
+        self, computers, parent=None, header=["Computer Name", "Status", "User"]
+    ):
         super(ComputerList, self).__init__(parent)
 
         self.setColumnCount(3)

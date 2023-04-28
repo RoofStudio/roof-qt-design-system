@@ -2,12 +2,12 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QStackedWidget, QMainWindow, QWidget
 
-from app.styles import get_stylesheet
+from RoofDesignSystem.styles import get_stylesheet
 
 
 class MainWindow(QMainWindow):
     def __init__(
-            self, parent=None, width=300, height=300, title="Main Window", icon_path=None
+        self, parent=None, width=300, height=300, title="Main Window", icon_path=None
     ):
         super().__init__(parent)
 
@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         list_of_routes = new_routes
 
         if not list_of_routes:
-            raise Exception('Routes not found')
+            raise Exception("Routes not found")
 
         for route in list_of_routes:
             route.component.next_page = self.set_page

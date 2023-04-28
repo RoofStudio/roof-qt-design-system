@@ -6,4 +6,3 @@ class Route:
 
 def new_route(name, component):
     return Route(name, component)
-

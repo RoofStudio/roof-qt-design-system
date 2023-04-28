@@ -6,7 +6,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         "pyside6",
-        # Add other dependencies if needed
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
