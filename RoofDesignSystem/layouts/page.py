@@ -1,5 +1,5 @@
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel
-from app.components.header import Header
+from PySide6.QtWidgets import QWidget, QVBoxLayout
+from RoofDesignSystem.components.header import Header
 
 
 class Page(QWidget):
