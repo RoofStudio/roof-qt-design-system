@@ -33,6 +33,9 @@ class LineEdit(QGroupBox):
         self.setLayout(self.layout)
         self.setObjectName("LineEdit")
 
+    def text(self):
+        return self.line_edit.text()
+
     def connect(self, action=None):
         if action:
             # connect signals in external events
